@@ -1,0 +1,9 @@
+project: savantenvs/lwip
+target: lwip_fuzz3
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/lwip_fuzz3/testsuite
+cmds:
+  - cmd: /mayhem/lwip_fuzz3
+    libfuzzer: true
+    timeout: 5
